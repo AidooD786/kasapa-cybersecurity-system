@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Kasapa FM Cybersecurity</title>
+    <link rel="stylesheet" href="css/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <a href="index.html" class="back-home">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            <div class="auth-logo">
+                <i class="fas fa-broadcast-tower"></i>
+                <h1>Kasapa FM</h1>
+                <p>Request Access to Cybersecurity Portal</p>
+            </div>
+        </div>
+
+        <div class="auth-card">
+            <h2>Request System Access</h2>
+            <p class="auth-subtitle">Role-based access control for Kasapa FM staff</p>
+            
+            <form id="signupForm" class="auth-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="firstName" placeholder="John" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="lastName" placeholder="Doe" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Work Email</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="john.doe@kasapafm.com" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <div class="input-group">
+                        <i class="fas fa-building"></i>
+                        <select id="department" required>
+                            <option value="">Select Department</option>
+                            <option value="it">IT & OT Department</option>
+                            <option value="newsroom">Digital Newsroom</option>
+                            <option value="studio">Broadcast Studio</option>
+                            <option value="admin">Administration</option>
+                            <option value="security">Cybersecurity Team</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="role">Requested Role</label>
+                    <div class="role-options">
+                        <label class="role-option">
+                            <input type="radio" name="role" value="journalist" required>
+                            <div class="role-card">
+                                <i class="fas fa-newspaper"></i>
+                                <h4>Journalist</h4>
+                                <p>Access to newsroom systems, file storage</p>
+                            </div>
+                        </label>
+                        
+                        <label class="role-option">
+                            <input type="radio" name="role" value="technician">
+                            <div class="role-card">
+                                <i class="fas fa-microphone"></i>
+                                <h4>Broadcast Technician</h4>
+                                <p>Access to studio equipment, broadcast systems</p>
+                            </div>
+                        </label>
+                        
+                        <label class="role-option">
+                            <input type="radio" name="role" value="analyst">
+                            <div class="role-card">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>Security Analyst</h4>
+                                <p>Full access to monitoring and security tools</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Create Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Minimum 8 characters" required>
+                        <button type="button" class="show-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-meter"></div>
+                        <span class="strength-text">Password strength: Weak</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmPassword" placeholder="Re-enter your password" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <span>I agree to the <a href="#">Cybersecurity Policy</a> and understand that access is monitored</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="auth-btn">
+                    <i class="fas fa-paper-plane"></i> Submit Access Request
+                </button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+                <div class="security-info">
+                    <h4><i class="fas fa-info-circle"></i> Security Requirements:</h4>
+                    <ul>
+                        <li>All access requires manager approval</li>
+                        <li>Multi-factor authentication is mandatory</li>
+                        <li>Access logs are monitored 24/7</li>
+                        <li>Complies with NIST Cybersecurity Framework</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
